@@ -1,56 +1,65 @@
+    <!-- TODO: oppdater spm 2 til resten med samme html oppsett som spm 1, og deretter oppdater css -->
+
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <script src="jscript.js"></script>
-        <link rel="stylesheet" href="style.css">
-        <title>MADRS - pasient</title>
-    </head>
-    <body>
-        <!-- Intro -->
-        <p style="font-size: 16px;"><i>Hensikten med dette spørreskjemaet er å gi et detaljert bilde av ditt nåværende
-            stemningsleie. Vi vil derfor be om at du på skjemaet under besvarer noen spørsmål
-            omkring stemningsleiet de siste tre døgn.
-            Skjemaet inneholder en rekke ulike påstander om hvordan man kan ha det.
-            Påståndene uttrykker ulike grader av plager, fra ingen plager til maksimale plager.
-            Sett et kryss i boksen utenfor den påstanden som du synes stemmer best med
-            hvordan du har hatt det de siste 3 dagene. Er du i tvil hvilken påstand som stemmer
-            best kan du velge å krysse av i en av boksene mellom to påstander.
-            Tenk ikke for lenge, men forsøk heller å fylle skjemaet ut raskt.
-            Hvis du har eventuelle spørsmål om skjemaet kan du rette disse til din behandler. </i></p>
-        
-            
-           <!-- 1. spoergsmaal -->
-            <tr>
-                <td>
-                    <h2>1. Stemningsleie</h2>
-                </td>
-            </tr>   
-            <tr>
-                <td>
-                    <h3>Her skal du krysse av for hvordan ditt
-                    stemningsleie har vært: Om du har kjent
-                    deg trist, tungsindig eller dyster. Tenk etter
-                    hvordan du har kjent deg de siste 3 dagene,
-                    om humøret har skiftet eller om det har
-                    vært det samme hele tiden, og forsøk å
-                    huske om du har kjent deg lettere til sinns
-                    hvis det har hendt noe positivt.</h3>
-                </td> 
-            </tr>   
-            <tr>
-                <td>
-                    <input type="radio" id="q1a0" name="q1" value="0">0. Jeg kan kjenne meg trist eller glad, alt etter omstendighetene.<br>
-                    <input type="radio" id="q1a1" name="q1" value="1">1.<br>
-                    <input type="radio" id="q1a2" name="q1" value="2">2. Jeg kjenner meg for det meste nedstemt, men iblant kjennes det lettere.<br>
-                    <input type="radio" id="q1a3" name="q1" value="3">3.<br>
-                    <input type="radio" id="q1a4" name="q1" value="4">4. Jeg har ofte en følelse av indre uro som iblant kan bli meget sterk og som jeg må anstrenge meg for å holde i sjakk.<br>
-                    <input type="radio" id="q1a5" name="q1" value="5">5.<br>
-                    <input type="radio" id="q1a6" name="q1" value="6">6. Jeg har fryktelige, langvarige eller uutholdelige følelser av angst.<br>
-                </td>
-            </tr>
+  <head>
+    <meta charset="utf-8">
+    <script src="jscript.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>MADRS - pasient</title>
+  </head>
+  <body>
+    <!-- Intro -->
+    <div class = "intro">
+      <p>Hensikten med dette spørreskjemaet er å gi et detaljert bilde av ditt nåværende
+      stemningsleie. Vi vil derfor be om at du på skjemaet under besvarer noen spørsmål
+      omkring stemningsleiet de siste tre døgn.
+      Skjemaet inneholder en rekke ulike påstander om hvordan man kan ha det.
+      Påståndene uttrykker ulike grader av plager, fra ingen plager til maksimale plager.
+      Sett et kryss i boksen utenfor den påstanden som du synes stemmer best med
+      hvordan du har hatt det de siste 3 dagene. Er du i tvil hvilken påstand som stemmer
+      best kan du velge å krysse av i en av boksene mellom to påstander.
+      Tenk ikke for lenge, men forsøk heller å fylle skjemaet ut raskt.
+      Hvis du har eventuelle spørsmål om skjemaet kan du rette disse til din behandler.</p>
+    </div>
+             
+    <!-- 1. spoergsmaal -->
+    <div class = "questionbox">
+      <h2>1. Stemningsleie</h2>
+      <h3>Her skal du krysse av for hvordan ditt
+      stemningsleie har vært: Om du har kjent
+      deg trist, tungsindig eller dyster. Tenk etter
+      hvordan du har kjent deg de siste 3 dagene,
+      om humøret har skiftet eller om det har
+      vært det samme hele tiden, og forsøk å
+      huske om du har kjent deg lettere til sinns
+      hvis det har hendt noe positivt.</h3>
+      <fieldset id = "question1">
+        <input type="radio" id="q1a0" name="q1" value="0">
+        <label for = "0">0. Jeg kan kjenne meg trist eller glad, alt etter omstendighetene.</label>
+          
+        <input type="radio" id="q1a1" name="q1" value="1">
+        <label for = "1">1.</label>
+          
+        <input type="radio" id="q1a2" name="q1" value="2">
+        <label for = "2">2. Jeg kjenner meg for det meste nedstemt, men iblant kjennes det lettere.</label>
 
-            <!-- 2. spoergsmaal -->
+        <input type="radio" id="q1a3" name="q1" value="3">3.
+        <label for = "3">3.</label>
+
+        <input type="radio" id="q1a4" name="q1" value="4">
+        <label for = "4">4. Jeg har ofte en følelse av indre uro som iblant kan bli meget sterk og som jeg må anstrenge meg for å holde i sjakk.</label>
+        
+        <input type="radio" id="q1a5" name="q1" value="5">
+        <label for = "5">5.</label>
+        
+        <input type="radio" id="q1a6" name="q1" value="6">
+        <label for = "6">6. Jeg har fryktelige, langvarige eller uutholdelige følelser av angst.</label>   
+      </fieldset>
+    </div>
+    
+    <!-- 2. spoergsmaal -->
 
             <tr>
                 <td>
