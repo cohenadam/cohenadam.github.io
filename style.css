@@ -1,0 +1,18 @@
+html {font-size: 20px;}
+
+h1, h2,h3, p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {font-size: 1rem;}
+h3 {font-size: 0.8rem;}
+
+.questionbox {
+  display: block;
+  width: 500px;
+  background-color: rgb(111, 168, 243);
+  margin: 20px;
+}
+
+
+
