@@ -1,18 +1,47 @@
-html {font-size: 20px;}
-
-h1, h2,h3, p {
-  font-family: Arial, Helvetica, sans-serif;
+html {font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
 }
 
-h2 {font-size: 1rem;}
+
+h2 {font-size: 1rem;
+  text-align: center;}
+
 h3 {font-size: 0.8rem;}
 
 .questionbox {
   display: block;
   width: 500px;
-  background-color: rgb(111, 168, 243);
-  margin: 20px;
+  border-radius: 10px;
+  background-color: rgb(154, 192, 241);
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 30px;
 }
 
+.questionbox > * {
+  font-size: 0.8rem;
+}
 
+fieldset {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
 
+ fieldset > span {
+  background-color:rgb(188, 212, 243);
+  margin: 10px;
+  padding: 0px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+span > input {
+  margin: 0px 0px 2px 0px;
+}
+
+span > label {
+  margin-left: 10px;
+  width: 100%;
+}
