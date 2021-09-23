@@ -15,7 +15,7 @@ h3 {font-size: 0.8rem;}
 .introbox, .questionbox_show {
 display: block;
 width: 500px;
-border-radius: 10px;
+border-radius: 20px;
 background-color: rgb(154, 192, 241);
 margin: auto;
 margin-bottom: 20px;
@@ -24,12 +24,6 @@ padding: 30px;
 
 .questionbox_hide {
   display: none;
-  width: 500px;
-  border-radius: 10px;
-  background-color: rgb(154, 192, 241);
-  margin: auto;
-  margin-bottom: 20px;
-  padding: 30px;
 }
 
 .questionbox > * {
