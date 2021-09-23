@@ -9,8 +9,8 @@
   </head>
   <body>
     <!-- Intro -->
-    <div class = "intro">
-      <p>Hensikten  med dette spørreskjemaet er å gi et detaljert bilde av ditt nåværende
+    <div class = "introbox">
+      <h2>Hensikten  med dette spørreskjemaet er å gi et detaljert bilde av ditt nåværende
       stemningsleie. Vi vil derfor be om at du på skjemaet under besvarer noen spørsmål
       omkring stemningsleiet de siste tre døgn.
       Skjemaet inneholder en rekke ulike påstander om hvordan man kan ha det.
@@ -19,11 +19,11 @@
       hvordan du har hatt det de siste 3 dagene. Er du i tvil hvilken påstand som stemmer
       best kan du velge å krysse av i en av boksene mellom to påstander.
       Tenk ikke for lenge, men forsøk heller å fylle skjemaet ut raskt.
-      Hvis du har eventuelle spørsmål om skjemaet kan du rette disse til din behandler.</p>
+      Hvis du har eventuelle spørsmål om skjemaet kan du rette disse til din behandler.</h2>
     </div>
              
     <!-- 1. spoergsmaal -->
-    <div class = "questionbox">
+    <div class = "questionbox_show">
       <h2>1. Stemningsleie</h2>
       <h3>Her skal du krysse av for hvordan ditt
       stemningsleie har vært: Om du har kjent
@@ -34,31 +34,31 @@
       huske om du har kjent deg lettere til sinns
       hvis det har hendt noe positivt.</h3>
       <fieldset id = "question1">
-        <span><input type="radio" id="q1a0" name="q1" value="0">
+        <span><input type="radio" id="q1a0" name="q1" value="0" onclick="changeClass('questionbox2')">
         <label for = "q1a0">0. Jeg kan kjenne meg trist eller glad, alt etter omstendighetene.</label></span>
           
-        <span><input type="radio" id="q1a1" name="q1" value="1">
+        <span><input type="radio" id="q1a1" name="q1" value="1" onclick="changeClass('questionbox2')">
         <label for = "q1a1">1.</label></span>
           
-        <span><input type="radio" id="q1a2" name="q1" value="2">
+        <span><input type="radio" id="q1a2" name="q1" value="2" onclick="changeClass('questionbox2')">
         <label for = "q1a2">2. Jeg kjenner meg for det meste nedstemt, men iblant kjennes det lettere.</label></span>
 
-        <span><input type="radio" id="q1a3" name="q1" value="3">
+        <span><input type="radio" id="q1a3" name="q1" value="3" onclick="changeClass('questionbox2')">
         <label for = "q1a3">3.</label></span>
 
-        <span><input type="radio" id="q1a4" name="q1" value="4">
+        <span><input type="radio" id="q1a4" name="q1" value="4" onclick="changeClass('questionbox2')">
         <label for = "q1a4">4. Jeg har ofte en følelse av indre uro som iblant kan bli meget sterk og som jeg må anstrenge meg for å holde i sjakk.</label></span>
         
-        <span><input type="radio" id="q1a5" name="q1" value="5">
+        <span><input type="radio" id="q1a5" name="q1" value="5" onclick="changeClass('questionbox2')">
         <label for = "q1a5">5.</label></span>
         
-        <span><input type="radio" id="q1a6" name="q1" value="6">
+        <span><input type="radio" id="q1a6" name="q1" value="6" onclick="changeClass('questionbox2')">
         <label for = "q1a6">6. Jeg har fryktelige, langvarige eller uutholdelige følelser av angst.</label></span>
       </fieldset>
     </div>
     
     <!-- 2. spoergsmaal -->
-    <div class = "questionbox">
+    <div class = "questionbox_hide" id = "questionbox2">
       <h2>2. Følelse av indre uro / spenning</h2>
       <h3>Her ber vi deg krysse av for i hvilken grad du
       har hatt følelser av indre spenning, uro,
@@ -85,7 +85,7 @@
     </div>
 
     <!-- 3. spoergsmaal -->
-    <div class = "questionbox">
+    <div class = "questionbox_hide" id = "questionbox3">
       <h2>3. Søvn</h2>
       <h3>Her ber vi deg anføre hvor godt du sover.
         Tenk etter hvor lenge du har sovet og hvor
@@ -113,7 +113,7 @@
     </div>
 
     <!-- 4. spoergsmaal -->
-    <div class = "questionbox">
+    <div class = "questionbox_hide" id = "questionbox4">
       <h2>4. Matlyst</h2>
       <h3>Her ber vi deg anføre hvordan appetitten din
         er, og tenke etter om den på noen måte er
@@ -140,7 +140,7 @@
     </div>
 
 <!-- 5. spoergsmaal -->
-    <div class = "questionbox">
+    <div class = "questionbox_hide" id = "questionbox5">
       <h2>5. Konsentrasjonsevne</h2>
       <h3>Her ber vi deg vurdere din evne til å holde
         tankene samlet, og konsentrere deg om
@@ -171,7 +171,7 @@
 
     <!-- 6. spoergsmaal -->
 
-    <div class = "questionbox">
+    <div class = "questionbox_hide" id = "questionbox6">
       <h2>6. Initiativ</h2>
       <h3>Her ber vi deg forsøke å vurdere din
         handlekraft de tre siste dagene. Spørsmålet
@@ -199,7 +199,7 @@
 
 
     <!-- 7. spoergsmaal -->
-    <div class = "questionbox">
+    <div class = "questionbox_hide" id = "questionbox7">
       <h2>7. Følelsesmessig engasjement</h2>
       <h3>Her ber vi deg ta stilling til hvordan du
         opplever din interesse for omverdenen og
@@ -226,7 +226,7 @@
     </div>
 
 <!-- 8. spoergsmaal -->
-<div class = "questionbox">
+<div class = "questionbox_hide" id = "questionbox8">
   <h2>8. Pessimisme</h2>
   <h3>Dette omhandler hvordan du ser på din egen
     fremtid og hvordan du oppfatter din egen
@@ -256,7 +256,7 @@
 
 
     <!-- 9. spoergsmaal -->
-    <div class = "questionbox">
+    <div class = "questionbox_hide" id = "questionbox9">
     <h2>9. Livslyst</h2>
     <h3>Spørsmålet gjelder lysten til å leve og om du
       har opplevd livet som meningsløst. Også om
@@ -284,6 +284,6 @@
 
     <input type="submit" onclick="showGenCode()" value="Færdig"></input>
     <h2><span id = "generatedcode"></span></h2>
-        
+  </div>     
   </body>
 </html>

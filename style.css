@@ -8,8 +8,18 @@ h2 {font-size: 1rem;
 
 h3 {font-size: 0.8rem;}
 
-.questionbox {
-  display: block;
+.introbox, .questionbox_show {
+display: block;
+width: 500px;
+border-radius: 10px;
+background-color: rgb(154, 192, 241);
+margin: auto;
+margin-bottom: 20px;
+padding: 30px;
+}
+
+.questionbox_hide {
+  display: none;
   width: 500px;
   border-radius: 10px;
   background-color: rgb(154, 192, 241);
@@ -28,7 +38,7 @@ fieldset {
   padding: 0px;
 }
 
- fieldset > span {
+ span {
   background-color:rgb(188, 212, 243);
   margin: 10px;
   padding: 0px;
@@ -42,6 +52,18 @@ span > input {
 }
 
 span > label {
-  margin-left: 10px;
   width: 100%;
+  padding: 20px;
+  border-radius: 10px;
 }
+
+input[type="radio"] {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+
+input[type="radio"]:checked + label {
+  background-color:rgb(94, 127, 170);
+}
+

@@ -1,3 +1,5 @@
+// CODE GENERATION SCRIPT
+
 function showGenCode()
 {
     // get answers and convert to integers
@@ -52,3 +54,8 @@ function getAnswerValue(questionname)
                 return question[i].value;
             }
 }
+
+// show next questionbox when answered
+function changeClass(questionbox) { 
+  document.getElementById(questionbox).className = "questionbox_show"; 
+} 
