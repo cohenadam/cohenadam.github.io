@@ -56,6 +56,7 @@ function getAnswerValue(questionname)
 }
 
 // show next questionbox when answered
-function changeClass(questionbox) { 
+function showQuestionbox(questionbox) { 
   document.getElementById(questionbox).className = "questionbox_show"; 
+  document.getElementById(questionbox).scrollIntoView();
 } 
