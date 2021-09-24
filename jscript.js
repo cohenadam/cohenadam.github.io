@@ -42,8 +42,32 @@ function showGenCode()
     for(i = 0; i < coderesult.length; i++) {
        coderesultbase64[i] = base64values[coderesult[i]];
    }
-    document.getElementById("generatedcode").innerHTML = coderesultbase64;
-}
+
+
+  // hide questionboxes 
+  
+    document.getElementById("introbox").className = "questionbox_hide"; 
+    document.getElementById("questionbox1").className = "questionbox_hide"; 
+    document.getElementById("questionbox2").className = "questionbox_hide"; 
+    document.getElementById("questionbox3").className = "questionbox_hide"; 
+    document.getElementById("questionbox4").className = "questionbox_hide"; 
+    document.getElementById("questionbox5").className = "questionbox_hide"; 
+    document.getElementById("questionbox6").className = "questionbox_hide"; 
+    document.getElementById("questionbox7").className = "questionbox_hide"; 
+    document.getElementById("questionbox8").className = "questionbox_hide"; 
+    document.getElementById("questionbox9").className = "questionbox_hide"; 
+    document.getElementById("submitbutton").className = "questionbox_hide"; 
+
+    // insert code result in div
+        // html for the result div
+    resultHTML = "<h3>Gi denne koden til din behandler:</h3>";
+    document.getElementById("generatedcode").innerHTML = resultHTML + coderesultbase64;
+    // hide the submission div
+    document.getElementById("questionbox10").className = "questionbox_hide";
+    // show the result div
+    document.getElementById("generatedcode").className = "questionbox_show";
+
+  }
 
 function getAnswerValue(questionname)
 {
