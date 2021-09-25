@@ -60,12 +60,13 @@ function showGenCode()
 
     // insert code result in div
         // html for the result div
-    resultHTML = "<h3>Gi denne koden til din behandler:</h3>";
-    document.getElementById("generatedcode").innerHTML = resultHTML + coderesultbase64;
+    resultHTML = '<h3>Gi denne koden til din behandler: </h3><p class = "codebox">' + coderesultbase64.join("") + "</p>";
+    document.getElementById("generatedcode").innerHTML = resultHTML;
     // hide the submission div
     document.getElementById("questionbox10").className = "questionbox_hide";
     // show the result div
     document.getElementById("generatedcode").className = "questionbox_show";
+    document.getElementById("helpinfobox").className = "helpinfobox";
 
   }
 
@@ -84,3 +85,43 @@ function showQuestionbox(questionbox) {
   document.getElementById(questionbox).className = "questionbox_show"; 
   document.getElementById(questionbox).scrollIntoView();
 } 
+
+// show correct pathway if doctor or patient
+function showPatientOrDoctor(patientordoctor) {
+  document.getElementById('patientordoctorbox').className = "questionbox_hide"; 
+  if (patientordoctor == 'patient') {
+    document.getElementById('introbox').className = "questionbox_show"; 
+  }
+  else {
+    document.getElementById('doctorbox').className = "questionbox_show"; 
+  }
+
+}
+
+// generate the result from code
+function reverseCode() {
+  document.getElementById("doctorbox").className = "questionbox_hide"; 
+  document.getElementById("generatedresult").className = "questionbox_show";
+  let codeinput = document.getElementById('code').value;
+  let answers = [];
+  codeinput = codeinput.split("");
+
+  let i;
+    for (i = 0; i < codeinput; i++) {
+        if (i == codeinput.length-1) {
+            coderesult.push(codeinput[i]);
+        }
+        else {
+        currentanswer = codeinput[i] >> 3;
+        nextanswer = codeinput[i] << 3;
+        nextanswer = nextanswer >> 3;
+        
+        coderesult.push(currentanswer);
+        coderesult.push(nextanswer);
+        i++;
+        }
+    }
+    document.getElementById("generatedresult").innerHTML = coderesult;
+
+
+}

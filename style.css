@@ -6,11 +6,12 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-
 h2 {font-size: 1rem;
-  text-align: center;}
+  text-align: center;
+}
 
-h3 {font-size: 0.8rem;}
+h3 {font-size: 0.8rem;
+}
 
 .introbox, .questionbox_show {
 display: block;
@@ -20,6 +21,10 @@ background-color: rgb(154, 192, 241);
 margin: auto;
 margin-bottom: 20px;
 padding: 30px;
+}
+
+.introbox > span > label {
+text-align: center;
 }
 
 .questionbox_hide {
@@ -61,7 +66,69 @@ input[type="radio"] {
   pointer-events: none;
 }
 
-input[type="radio"]:checked + label {
+input[type="radio"]:checked + label  {
   background-color:rgb(94, 127, 170);
 }
 
+label:hover {
+  background-color:rgb(94, 127, 170);
+}
+
+.submitbutton {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color:rgb(188, 212, 243);
+  margin: 10px;
+  display: flex;
+  transition: all 0.2s;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.submitbutton:hover {
+  background-color:rgb(94, 127, 170);
+  border-color: rgb(94, 127, 170);
+}
+
+.codebox {
+  background-color:rgb(209, 223, 241);
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 40px;
+  text-align: center;
+  border: solid 2px rgb(72, 110, 157);
+}
+
+.insertcodebox {
+  background-color:rgb(209, 223, 241);
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 40px;
+  text-align: center;
+  border: solid 2px rgb(72, 110, 157);
+  width: 200px;
+  text-align: center;
+}
+
+.helpinfobox {
+  display: block;
+  width: 500px;
+  border-radius: 5px;
+  background-color:rgb(188, 212, 243);
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: auto;
+  text-align: center;
+  border: solid 2px rgb(72, 110, 157);
+  padding: 30px;
+}
+
+div#doctorbox.questionbox_show {
+  text-align: center;
+}
+
+input#code.insertcodebox {
+
+}

@@ -8,8 +8,32 @@
     <title>MADRS - pasient</title>
   </head>
   <body>
-    <!-- Intro -->
-    <div class = "introbox">
+    <!-- Are you a doctor or pasient -->
+  <div class = "questionbox_show" id = "patientordoctorbox">
+    <h2>Velkommen. Er du pasient eller behandler?</h2>
+    <fieldset id = "questionpatientordoctor">
+      <span><input type="radio" id="patient" name="patientordoctor" value="patient" onclick="showPatientOrDoctor('patient')">
+        <label for = "patient">Pasient</label></span>
+          
+        <span><input type="radio" id="doctor" name="doctororpasient" value="doctor" onclick="showPatientOrDoctor('doctor')">
+        <label for = "doctor">Behandler</label></span>
+    </fieldset>
+  </div>
+
+  <!-- Doctor area, insert code -->
+  <div class = "questionbox_hide" id = "doctorbox">
+    Innsett pasientens kode her:
+    <input type="text" id="code" name="code" class = "insertcodebox" maxlength="5">
+    <span><input type="radio" id="reversecode" name="reversecode" onclick="reverseCode()">
+    <label for = "reversecode">Vis resultat</label></span>
+  </div>
+
+  <div class = "questionbox_hide" id = "generatedresult">
+    
+  </div>
+
+  <!-- Patient area, intro to questionaire-->
+    <div class = "questionbox_hide" id = "introbox">
       <h2>Hensikten  med dette spørreskjemaet er å gi et detaljert bilde av ditt nåværende
       stemningsleie. Vi vil derfor be om at du på skjemaet under besvarer noen spørsmål
       omkring stemningsleiet de siste tre døgn.
@@ -20,10 +44,13 @@
       best kan du velge å krysse av i en av boksene mellom to påstander.
       Tenk ikke for lenge, men forsøk heller å fylle skjemaet ut raskt.
       Hvis du har eventuelle spørsmål om skjemaet kan du rette disse til din behandler.</h2>
+      <span><input type="radio" id="understood" name="understood" onclick="showQuestionbox('questionbox1')">
+      <label for = "understood">Ok, jeg forstår.</label></span>
+
     </div>
              
     <!-- 1. spoergsmaal -->
-    <div class = "questionbox_show">
+    <div class = "questionbox_hide" id = "questionbox1">
       <h2>1. Stemningsleie</h2>
       <h3>Her skal du krysse av for hvordan ditt
       stemningsleie har vært: Om du har kjent
@@ -265,25 +292,29 @@
       reell utvei. Husk: vektlegg kun de siste 3
       dagene.</h3>          
     <fieldset id = "question9">
-      <span><input type="radio" id="q9a0" name="q9" value="0">
+      <span><input type="radio" id="q9a0" name="q9" value="0" onclick="showQuestionbox('questionbox10')">
       <label for = "q9a0">0. Jeg har normal lyst til å leve.</label></span>
-      <span><input type="radio" id="q9a1" name="q9" value="1">
+      <span><input type="radio" id="q9a1" name="q9" value="1" onclick="showQuestionbox('questionbox10')">
       <label for = "q9a1">1.</label></span>
-      <span><input type="radio" id="q9a2" name="q9" value="2">
+      <span><input type="radio" id="q9a2" name="q9" value="2" onclick="showQuestionbox('questionbox10')">
       <label for = "q9a2">2. Livet føles ikke særlig meningsfylt, men jeg ønsker likevel ikke at jeg var død.</label></span>
-      <span><input type="radio" id="q9a3" name="q9" value="3">
+      <span><input type="radio" id="q9a3" name="q9" value="3" onclick="showQuestionbox('questionbox10')">
       <label for = "q9a3">3.</label></span>
-      <span><input type="radio" id="q9a4" name="q9" value="4">
+      <span><input type="radio" id="q9a4" name="q9" value="4" onclick="showQuestionbox('questionbox10')">
       <label for = "q9a4">4. Jeg synes ofte det ville vært bedre å være død, og selv om jeg egentlig ikke ønsker det kan selvmord av og til oppleves som en mulig løsning.</label></span>
-      <span><input type="radio" id="q9a5" name="q9" value="5">
+      <span><input type="radio" id="q9a5" name="q9" value="5" onclick="showQuestionbox('questionbox10')">
       <label for = "q9a5">5.</label></span>
-      <span><input type="radio" id="q9a6" name="q9" value="6">
+      <span><input type="radio" id="q9a6" name="q9" value="6" onclick="showQuestionbox('questionbox10')">
       <label for = "q9a6">6. Jeg har egentlig innsett at min eneste utvei er å dø, og jeg tenker mye på hvordan jeg skal ta livet av meg.</label></span>
       </fieldset>
     </div>
-
-    <input type="submit" onclick="showGenCode()" value="Færdig"></input>
-    <h2><span id = "generatedcode"></span></h2>
-  </div>     
+    
+    <div class = "questionbox_hide" id = "questionbox10">
+      <input type="submit" class="submitbutton" onclick="showGenCode()" value="Ferdig" id = "submitbutton"></input>
+    </div>       
+      <div class = "questionbox_hide" id = "generatedcode">
+      </div>
+      <div class = "questionbox_hide" id = "helpinfobox">Har du akutte tanker om å ta ditt eget liv, ring 113. Dersom du opplever et problem du trenger rask hjelp med, ring 116 117. Da kommer du til nærmeste legevakt. Les mer om dine muligheter paa <a href=https://psykiskhelse.no/trenger-du-hjelp">Psykiskhelse.no</a>
+      </div>
   </body>
 </html>
