@@ -101,12 +101,22 @@ function showPatientOrDoctor(patientordoctor) {
 // generate the result from code
 function reverseCode() {
   document.getElementById("doctorbox").className = "questionbox_hide"; 
-  document.getElementById("generatedresult").className = "questionbox_show";
+  document.getElementById("generatedanswers").className = "questionbox_show";
   let codeinput = document.getElementById('code').value;
   let answers = [];
   codeinput = codeinput.split("");
+  
+  // turn the code letter into a base64 index number
+  let base64values = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2';
+  base64values = base64values.split(" ");
+  for(a = 0; a < codeinput.length; a++) {
+    codeinput[a] = base64values.indexOf(codeinput[a]);
+}
 
-  let i;
+// split the base64 number into two numbers between 0-6
+let coderesult = [];
+let currentanswer;
+let nextanswer;
     for (i = 0; i < codeinput; i++) {
         if (i == codeinput.length-1) {
             coderesult.push(codeinput[i]);
@@ -121,7 +131,8 @@ function reverseCode() {
         i++;
         }
     }
-    document.getElementById("generatedresult").innerHTML = coderesult;
 
+    document.getElementById("generatedanswers").className = "questionbox_show";
+    document.getElementById("generatedanswers").innerHTML = coderesult;
 
 }
