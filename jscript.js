@@ -117,20 +117,20 @@ function reverseCode() {
 let coderesult = [];
 let currentanswer;
 let nextanswer;
-    for (i = 0; i < codeinput; i++) {
+    for (i = 0; i < codeinput.length; i++) {
         if (i == codeinput.length-1) {
             coderesult.push(codeinput[i]);
         }
         else {
         currentanswer = codeinput[i] >> 3;
-        nextanswer = codeinput[i] << 3;
-        nextanswer = nextanswer >> 3;
+        nextanswer = codeinput[i] & 7; // 7 = 000111
         
         coderesult.push(currentanswer);
         coderesult.push(nextanswer);
-        i++;
         }
     }
+
+    coderesult = coderesult.map((i) => Number(i));
 
     document.getElementById("generatedanswers").className = "questionbox_show";
     document.getElementById("generatedanswers").innerHTML = coderesult;
