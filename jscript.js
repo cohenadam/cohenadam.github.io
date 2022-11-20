@@ -85,7 +85,7 @@ function getAnswerValue(questionname)
 // show next questionbox when answered
 function showQuestionbox(questionbox) { 
   document.getElementById(questionbox).className = "questionbox_show"; 
-  document.getElementById(questionbox).scrollIntoView();
+  document.getElementById(questionbox).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 } 
 
 // show correct pathway if doctor or patient
